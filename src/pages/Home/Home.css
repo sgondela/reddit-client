@@ -1,0 +1,33 @@
+section.ant-layout header.ant-layout-header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+section.ant-layout.ant-layout-has-sider.body aside.ant-layout-sider.ant-layout-sider-dark.sider {
+  flex: 0 0 200px;
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 850px) {
+  section.ant-layout.ant-layout-has-sider.body {
+    display: grid;
+    grid-template: auto auto / 1fr;
+    grid-template-areas: 'main'
+                         'aside';
+  }
+
+  section.ant-layout.ant-layout-has-sider.body main {
+    grid-area: main;
+    width: 100%;
+  }
+
+  section.ant-layout.ant-layout-has-sider.body aside.ant-layout-sider.ant-layout-sider-dark.sider {
+    grid-area: aside;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 0 16px 16px;
+  }
+}

@@ -1,0 +1,35 @@
+button.subreddit-button:hover,
+button.subreddit-button:focus {
+  color: white;
+}
+
+ul.subreddits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.subreddits-list li {
+  padding-left: 16px;
+}
+
+ul.subreddits-list li.selected-subreddit::before {
+  content: "•";
+  padding-right: 8px;
+  color: white; 
+}
+
+li.selected-subreddit .subreddit-button {
+  color: white;
+}
+
+.subreddit-button:hover,
+.subreddit-button:focus {
+  color: white;
+}
+
+.subreddit-card h2 {
+  color: white;
+  padding: 8px 0 0 16px;
+  font-size: 18px;
+}

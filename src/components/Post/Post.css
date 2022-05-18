@@ -1,0 +1,97 @@
+.post-wrapper {
+  display: grid;
+  grid-template: repeat(4, auto) / 40px repeat(3, 1fr);
+  gap: 6px 16px;
+  grid-template-areas: 'ups title title title'
+                       'ups image image image'
+                       'ups divid divid divid'
+                       'ups user  time  comms';
+}
+
+.ant-card p.post-votes-value {
+  grid-area: ups;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.ant-card h3.post-title {
+  grid-area: title;
+}
+
+.ant-card div.post-image-container {
+  grid-area: image;
+  width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.ant-card .post-image-container img.post-image {
+  max-width: 100%;
+  padding: 0 48px 0 0;
+  display: block;
+}
+
+.ant-card .post-divider {
+  grid-area: divid;
+}
+
+.ant-card .author-username {
+  grid-area: user;
+  font-weight: bolder;
+  color: grey;
+}
+
+.ant-card .post-time {
+  grid-area: time;
+  max-height: 36px;
+  color: grey;
+}
+
+.ant-card .post-comments-container {
+  grid-area: comms;
+  max-height: 36px;
+}
+
+button.icon-action-button {
+  display: flex;
+  height: 100%;
+  align-items: top;
+  background-color: transparent;
+  border: none;
+  color: grey;
+}
+
+svg.icon-action {
+height: 70%;
+width: auto;
+padding: 0 5px 0 0;
+}
+
+button.icon-action-button:hover,
+button.icon-action-button:focus {
+  color: #000000D9;
+}
+
+@media only screen and (max-width: 670px) {
+  .post-wrapper {
+    display: grid;
+    grid-template: repeat(6, auto) / 40px 1fr;
+    gap: 6px 16px;
+    grid-template-areas: 'ups title'
+                         'ups image'
+                         'ups divid'
+                         'ups  user'
+                         'ups  time'
+                         'ups comms';
+  }
+
+  .ant-card .post-image-container img.post-image {
+    max-width: 100%;
+    padding: 0 0 0 0;
+    display: block;
+  }
+
+  button.icon-action-button {
+    padding-left: 0px;
+  }
+}
